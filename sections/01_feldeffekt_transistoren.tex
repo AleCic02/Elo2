@@ -62,7 +62,10 @@ Kanal von \textbf{D}rain zu \textbf{S}ource (Stromfluss), gesteuert von \textbf{
 
 \vspace{0.2cm}
 \textbf{Verstärkungsmass Transkonduktanz:}
-$$  g_m = \frac{ 2 \cdot I_{\rm DSS}}{V_p^2} \cdot ( V_{\rm GS} - V_p ) = \frac{2}{| V_p |} \cdot \sqrt{I_{\rm DSS} \cdot I_D} \qquad [g_m] = \siemens $$
+\begin{align*}
+    g_m &= \frac{ 2 \cdot I_{\rm DSS}}{V_p^2} \cdot ( V_{\rm GS} - V_p ) \\
+        &= \frac{2}{| V_p |} \cdot \sqrt{I_{\rm DSS} \cdot I_D} \qquad [g_m] = \siemens
+\end{align*}
 
 
 \subsection{MOS-FETs}
@@ -123,17 +126,18 @@ $$  g_m = \frac{ 2 \cdot I_{\rm DSS}}{V_p^2} \cdot ( V_{\rm GS} - V_p ) = \frac{
 
 \subsubsection{Kleinsignal-Ersatzschaltung (MOS-FET) Voltage Controlled Current Source}
 
-\begin{minipage}[t]{0.65\columnwidth}
+
+\begin{minipage}[t]{0.64\columnwidth}
     \includegraphics[align=t, width=\columnwidth]{images/mos_fet_kleinsignalersatzschaltung.png}
 \end{minipage}
 \hfill
-\begin{minipage}[t]{0.33\columnwidth}
+\begin{minipage}[t]{0.24\columnwidth}
     $$ \beta = \frac{\mathrm{KP} \cdot W}{L} $$
-    $$ \mathrm{KP} = C_{\rm oc} \cdot \mu_n \approx 100 \frac{\micro \ampere}{\volt^2} $$  % kann man noch verbessern...
 \end{minipage}
-
+    $$ \mathrm{KP} = C_{\rm oc} \cdot \mu_n \approx 100 \frac{\micro \ampere}{\volt^2} $$  % kann man noch verbessern...
 $$ S = g_m = \beta \cdot (V_{\rm GS} - V_{\rm TH}) = \sqrt{2 \cdot \beta \cdot I_D}$$ %= \sqrt{ 2 \cdot \frac{\mathrm{KP} \cdot W}{L} \cdot I_D} $$
 $$ \frac{1}{r_{\rm DS}} = g_{\rm DS} = \lambda \cdot I_D $$
+
 
 
 \subsubsection{Temperaturabhängigkeit der Übrtragungskennlinie}
@@ -170,11 +174,11 @@ Ausgangskennlinienfeld eingezeichnet:
 
 \subsubsection{Push-Pull / Digitaler Inverter}  % eventuell weglassen
 
-\begin{minipage}[c]{0.35\columnwidth}
+\begin{minipage}[c]{0.34\columnwidth}
     \includegraphics[width=\columnwidth]{images/push_pull_digital_inverter.png}
 \end{minipage}
 \hfill
-\begin{minipage}[c]{0.5\columnwidth}
+\begin{minipage}[c]{0.64\columnwidth}
     \begin{itemize}
         \item $V_{\rm in}$ geht auf NMOS und PMOS
         \item Ermöglicht grössere Verstärkung
@@ -190,15 +194,14 @@ Ausgangskennlinienfeld eingezeichnet:
 Wenn der FET als Schalter eingesetzt wird, so arbeitet er im \textbf{linearen Bereich} \\
 ($V_{\rm GS} > V_{\rm TH}$, d.h. $V_{\rm out} < V_{\rm DD} - V_{\rm TH} $)
 
-\begin{minipage}[c]{0.49\columnwidth}
     $$ I_{\rm D,lin} = \beta \cdot ( V_{\rm GS} - V_{\rm TH} - \frac{V_{\rm DS}}{2} ) \cdot V_{\rm DS} $$
+\begin{minipage}[c]{0.39\columnwidth}
     \begin{center}
-        
         Schalter geschlossen: $R_{\rm FET} = R_{\rm DS(on)} $
     \end{center}
 \end{minipage}
 \hfill
-\begin{minipage}[c]{0.49\columnwidth}
+\begin{minipage}[c]{0.59\columnwidth}
     $$ r_{\rm DS} = \dfrac{\diff V_{\rm DS}}{\diff I_D} = \frac{1}{\beta \cdot (V_{\rm GS} - V_{\rm TH})}  $$
     \begin{center}
         Schalter offen: $R_{\rm FET} = \infty$ 

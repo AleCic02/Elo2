@@ -54,11 +54,11 @@
 
 \subsection{Verlustleistung bei CMOS-Logik}
 
-\begin{minipage}[c]{0.48\columnwidth}
+\begin{minipage}[c]{0.38\columnwidth}
     $$ \boxed{ P_V = C \cdot V_{\rm CC}^2 \cdot f} $$
 \end{minipage}
 \hfill
-\begin{minipage}[c]{0.48\columnwidth}
+\begin{minipage}[c]{0.58\columnwidth}
     \begin{tabular}{ll}
         $C$ & Kapazität (aus Datenblatt) \\
         $f$ & Frequenz 
@@ -68,13 +68,10 @@
 
 \subsection{Verzögerungszeit}
 
-\begin{minipage}[t]{0.48\columnwidth}
+\begin{minipage}[t]{\columnwidth}
     \textbf{Linearer Bereich}
     $$ \boxed{t_{\rm pHL} = 0.69 \cdot R_{\rm on} \cdot C_L} $$
     \textrightarrow\ Exponentielle Entladung! 
-\end{minipage}
-\hfill
-\begin{minipage}[t]{0.48\columnwidth}
     \textbf{Sättigung (Stromquellen-Bereich)}
     $$ \boxed{t_{\rm pHL} = \frac{C_L \cdot \frac{V_{\rm swing}}{2}}{I_{\rm sat}} \approx \frac{C_L}{k_n \cdot V_{\rm DD}} }$$
     \textrightarrow\ Lineare Entladung!
