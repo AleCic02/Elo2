@@ -90,75 +90,75 @@ Anstatt eines Komparators ADCs mit mehreren Bits für den Aufbau des Sigma-Delta
 \end{minipage}
 
 
-\subsection{Digitalfilter}
-
-Der digitale Teil des Sigma-Delta-ADCs kann auf mehrere Arten realisiert werden.  Das Digitalfilter soll die folgenden Aufgaben
-erfüllen:
-
-\begin{minipage}[t]{0.55\columnwidth}
-    \begin{itemize}
-        \item Reduktion des Rauschens (wegen Noise-Shaping viel Rauschen bei hohen Frequenzen)
-    \end{itemize}
-\end{minipage}
-\hfill
-\begin{minipage}[t]{0.42\columnwidth}
-    \begin{itemize}
-        \item Erhöhung der Auflösung
-        \item Redution der Sample Rate
-    \end{itemize}
-\end{minipage}
-
-
-\subsubsection{Mittelwertbildung}
-
-Einfachste Mittelwertbildung umgesetzt mittels countern \textrightarrow\ Funktionsweise und Formel 
-siehe Abschnitt~\ref{Sigma-Delta-modulator Ordnung 1}
-
-
-\subsubsection{Kammfilter (Mittelwertfilter)}
-
-\begin{minipage}[t]{0.45\columnwidth}
-    \begin{tabular}{ll}
-        $Z^{-1}$    & um $1$ Takt verschieben \\
-        $Z^{-L}$    & um $L$ Takte verschieben \\
-    \end{tabular}
-\end{minipage}
-\hfill
-\begin{minipage}[t]{0.52\columnwidth}
-    \begin{tabular}{ll}
-        FIR    & Finite Impulse Response \\
-        IIR    & Infinite Impulse Response \\
-    \end{tabular}
-\end{minipage}
-
-\vspace{0.2cm}
-
-\begin{minipage}[t]{0.58\columnwidth}
-    \begin{center}
-        \myul{FIR-Filter}
-    \end{center}
-    \includegraphics[width=\columnwidth]{images/kammfilter.png}
-\end{minipage}
-\hfill
-\begin{minipage}[t]{0.38\columnwidth}
-    \begin{center}
-        \myul{IIR-Filter}
-    \end{center}
-    \includegraphics[width=\columnwidth]{images/kammfilter_IIR-filter.png}
-\end{minipage}
-
-\subsubsection*{Frequenzgang kaskadierte Kammfilter}
-
-\begin{minipage}[c]{0.4\columnwidth}
-    \includegraphics[width=\columnwidth]{images/frequenzgang_kaskadierte_kammfilter.png}
-\end{minipage}
-\hfill
-\begin{minipage}[c]{0.58\columnwidth}
-    \begin{itemize}
-        \item Bezeichnung kaskadierte Kammfilter: \\
-            CIC (Cascaded-Integrator-Comb-Filter)
-        \item Notches ('Auslöschungen') bei $n \cdot \frac{\text{Sampling-Freq.}}{L}$
-        \item Je höher die Ordnung, desto steiler der Abfall im Amplitudengang
-    \end{itemize}
-\end{minipage}
+%\subsection{Digitalfilter}
+%
+%Der digitale Teil des Sigma-Delta-ADCs kann auf mehrere Arten realisiert werden.  Das Digitalfilter soll die folgenden Aufgaben
+%erfüllen:
+%
+%\begin{minipage}[t]{0.55\columnwidth}
+%    \begin{itemize}
+%        \item Reduktion des Rauschens (wegen Noise-Shaping viel Rauschen bei hohen Frequenzen)
+%    \end{itemize}
+%\end{minipage}
+%\hfill
+%\begin{minipage}[t]{0.42\columnwidth}
+%    \begin{itemize}
+%        \item Erhöhung der Auflösung
+%        \item Redution der Sample Rate
+%    \end{itemize}
+%\end{minipage}
+%
+%
+%\subsubsection{Mittelwertbildung}
+%
+%Einfachste Mittelwertbildung umgesetzt mittels countern \textrightarrow\ Funktionsweise und Formel 
+%siehe Abschnitt~\ref{Sigma-Delta-modulator Ordnung 1}
+%
+%
+%\subsubsection{Kammfilter (Mittelwertfilter)}
+%
+%\begin{minipage}[t]{0.45\columnwidth}
+%    \begin{tabular}{ll}
+%        $Z^{-1}$    & um $1$ Takt verschieben \\
+%        $Z^{-L}$    & um $L$ Takte verschieben \\
+%    \end{tabular}
+%\end{minipage}
+%\hfill
+%\begin{minipage}[t]{0.52\columnwidth}
+%    \begin{tabular}{ll}
+%        FIR    & Finite Impulse Response \\
+%        IIR    & Infinite Impulse Response \\
+%    \end{tabular}
+%\end{minipage}
+%
+%\vspace{0.2cm}
+%
+%\begin{minipage}[t]{0.58\columnwidth}
+%    \begin{center}
+%        \myul{FIR-Filter}
+%    \end{center}
+%    \includegraphics[width=\columnwidth]{images/kammfilter.png}
+%\end{minipage}
+%\hfill
+%\begin{minipage}[t]{0.38\columnwidth}
+%    \begin{center}
+%        \myul{IIR-Filter}
+%    \end{center}
+%    \includegraphics[width=\columnwidth]{images/kammfilter_IIR-filter.png}
+%\end{minipage}
+%
+%\subsubsection*{Frequenzgang kaskadierte Kammfilter}
+%
+%\begin{minipage}[c]{0.4\columnwidth}
+%    \includegraphics[width=\columnwidth]{images/frequenzgang_kaskadierte_kammfilter.png}
+%\end{minipage}
+%\hfill
+%\begin{minipage}[c]{0.58\columnwidth}
+%    \begin{itemize}
+%        \item Bezeichnung kaskadierte Kammfilter: \\
+%            CIC (Cascaded-Integrator-Comb-Filter)
+%        \item Notches ('Auslöschungen') bei $n \cdot \frac{\text{Sampling-Freq.}}{L}$
+%        \item Je höher die Ordnung, desto steiler der Abfall im Amplitudengang
+%    \end{itemize}
+%\end{minipage}
 

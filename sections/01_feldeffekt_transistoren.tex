@@ -2,7 +2,7 @@
 
 \subsection{FET-Typen und Symbole}
 
-\includegraphics[align=t, width=\columnwidth]{images/fet_symbole_typen.png}
+%\includegraphics[align=t, width=\columnwidth]{images/fet_symbole_typen.png}
 
 
 \subsubsection{Anschlüsse eines FET}
@@ -13,25 +13,25 @@ Kanal von \textbf{D}rain zu \textbf{S}ource (Stromfluss), gesteuert von \textbf{
 
 \subsection{Sperrschicht-FET / Junction FET (JFET)}
 
-\subsubsection{Kennlinien}
-
-\begin{minipage}[t]{0.43\columnwidth}
-    \centering \myul{\textbf{Eingangskennlinie}} \\
-    \includegraphics[align=c, width=\columnwidth]{images/jfet_eingangskennlinie.png}
-\end{minipage}
-\hfill
-\begin{minipage}[t]{0.54\columnwidth}
-    \centering \myul{\textbf{Ausgangskennlinien}} \\
-    \includegraphics[align=c, width=\columnwidth]{images/jfet_ausgangskennlinien.png}
-\end{minipage}
+%\subsubsection{Kennlinien}
+%
+%\begin{minipage}[t]{0.43\columnwidth}
+%    \centering \myul{\textbf{Eingangskennlinie}} \\
+%    \includegraphics[align=c, width=\columnwidth]{images/jfet_eingangskennlinie.png}
+%\end{minipage}
+%\hfill
+%\begin{minipage}[t]{0.54\columnwidth}
+%    \centering \myul{\textbf{Ausgangskennlinien}} \\
+%    \includegraphics[align=c, width=\columnwidth]{images/jfet_ausgangskennlinien.png}
+%\end{minipage}
 
 
 \subsubsection{Linearer Bereich (gesteuerter Widerstand)}
 
-\begin{minipage}[t]{0.3\columnwidth}
-    \includegraphics[align=t, width=\columnwidth]{images/fet_aufbau_linearer_bereich.png}
-\end{minipage}
-\hfill
+%\begin{minipage}[t]{0.3\columnwidth}
+%    \includegraphics[align=t, width=\columnwidth]{images/fet_aufbau_linearer_bereich.png}
+%\end{minipage}
+%\hfill
 \begin{minipage}[t]{0.68\columnwidth}
     \begin{itemize}
         \item Für \textbf{kleinen Spannung-Unterschied $V_{\rm DS}$}
@@ -121,7 +121,7 @@ $$  g_m = \frac{ 2 \cdot I_{\rm DSS}}{V_p^2} \cdot ( V_{\rm GS} - V_p ) = \frac{
 \end{minipage}
 
 
-\subsubsection{Kleinsignal-Ersatzschaltung (MOS-FET)}
+\subsubsection{Kleinsignal-Ersatzschaltung (MOS-FET) Voltage Controlled Current Source}
 
 \begin{minipage}[t]{0.65\columnwidth}
     \includegraphics[align=t, width=\columnwidth]{images/mos_fet_kleinsignalersatzschaltung.png}
@@ -132,7 +132,7 @@ $$  g_m = \frac{ 2 \cdot I_{\rm DSS}}{V_p^2} \cdot ( V_{\rm GS} - V_p ) = \frac{
     $$ \mathrm{KP} = C_{\rm oc} \cdot \mu_n \approx 100 \frac{\micro \ampere}{\volt^2} $$  % kann man noch verbessern...
 \end{minipage}
 
-$$ S = g_m = \beta \cdot (V_{\rm GS} - V_{\rm TH}) = \sqrt{2 \cdot \beta \cdot I_D} = \sqrt{ 2 \cdot \frac{\mathrm{KP} \cdot W}{L} \cdot I_D} $$
+$$ S = g_m = \beta \cdot (V_{\rm GS} - V_{\rm TH}) = \sqrt{2 \cdot \beta \cdot I_D}$$ %= \sqrt{ 2 \cdot \frac{\mathrm{KP} \cdot W}{L} \cdot I_D} $$
 $$ \frac{1}{r_{\rm DS}} = g_{\rm DS} = \lambda \cdot I_D $$
 
 
