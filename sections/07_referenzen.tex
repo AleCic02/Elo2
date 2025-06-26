@@ -16,11 +16,10 @@
 \begin{minipage}[c]{0.78\columnwidth}
     \myul{\textbf{Speisespannungsabhängigkeit}}
 
-    \begin{tabular}{ll}
-        Spannungsänderung:  & $\boxed{\Delta V_{\rm ref} = \Delta V_{\rm POS} \frac{R_2}{R_1 + R_2}} $ \\
-        Sensitivität:       & $\boxed{ \overunderset{V_{\rm ref}}{V_{\rm POS}}{S} = 
-                                \frac{\frac{\Delta V_{\rm ref}}{V_{\rm ref}}}{\frac{\Delta V_{\rm POS}}{V_{\rm POS}}} = 1 \text{ \textrightarrow\ schlecht}}$
-    \end{tabular}
+        Spannungsänderung:
+        $\boxed{\Delta V_{\rm ref} = \Delta V_{\rm POS} \frac{R_2}{R_1 + R_2}} $ \\
+        Sensitivität:       
+        $\boxed{ \overunderset{V_{\rm ref}}{V_{\rm POS}}{S} = \frac{\frac{\Delta V_{\rm ref}}{V_{\rm ref}}}{\frac{\Delta V_{\rm POS}}{V_{\rm POS}}} = 1 \text{ \textrightarrow\ schlecht}}$
 
     \vspace{0.2cm}
     \myul{\textbf{Temperaturabhängigkeit}} \\
@@ -37,26 +36,25 @@
 \hfill
 \begin{minipage}[c]{0.78\columnwidth}
     Ersatzschaltung der Referenzquelle durch Thévenin-Äquivalent mit
-    $$ R_P = R_1 || R_2 \quad \text{\textrightarrow\ sehr lastabhängig, da } R_P \text{ gross} $$
+    $$ R_P = R_1 || R_2 \ \text{\textrightarrow\ sehr lastabhängig, da } R_P \text{ gross} $$
 \end{minipage}
 
 
 \subsection{Diodenreferenz}
 
+    $$ \boxed{ V_{\rm ref} = V_D = n \cdot V_T \cdot \ln \Big( \frac{I}{I_S} \Big) 
+    \quad \text{mit } V_T =\frac{k T}{q} \approx 25 \, \milli \ampere } $$
 \begin{minipage}[c]{0.2\columnwidth}
     \includegraphics[width=\columnwidth]{images/diodenreferenz.png}
 \end{minipage}
 \hfill
 \begin{minipage}[c]{0.78\columnwidth}
-    $$ \boxed{ V_{\rm ref} = V_D = n \cdot V_T \cdot \ln \Big( \frac{I}{I_S} \Big) 
-    \quad \text{mit } V_T =\frac{k T}{q} \approx 25 \, \milli \ampere } $$
     %$$ I = \frac{V_{\rm POS} - V_D}{R_1} \approx \frac{V_{\rm POS}}{R_1} $$ % bei Platzproblemen weglassen
 
     \myul{\textbf{Speisespannungsabhängigkeit}}
     
-    \begin{tabular}{ll}
-        Sensitivität:   & $ \boxed{ \overunderset{V_{\rm ref}}{I}{S} = \frac{1}{\ln \Big( \frac{I}{I_S} \Big)} = 0.065 \text{ \textrightarrow\ gut }} $
-    \end{tabular}
+    Sensitivität:
+    $ \boxed{ \overunderset{V_{\rm ref}}{I}{S} = \frac{1}{\ln \Big( \frac{I}{I_S} \Big)} = 0.065 \text{ \textrightarrow\ gut }} $
 
     \vspace{0.2cm}
     \myul{\textbf{Temperaturabhängigkeit}} \\
@@ -130,12 +128,8 @@
         \item Schaltung hat zwei mögliche Arbeitspunkte\\
         (AP $I_1 = I_2 = 0$ ist unerwünscht!)
     \end{itemize}
-
-    \vspace{0.2cm}
-    \begin{tabular}{c c}
-        $ \boxed{ V_{D1} = I_2 \cdot R_2 = V_{R2}} $ & $ \boxed{ I_{\rm REF} = I_1 = I_2 } $
-    \end{tabular}
 \end{minipage}
+$ \boxed{ V_{D1} = I_2 \cdot R_2 = V_{R2}} $ $ \boxed{ I_{\rm REF} = I_1 = I_2 } $
 
 
 \subsection{Proportional To Absolute Temperature (PTAT)}
@@ -145,6 +139,8 @@
 \end{minipage}
 \hfill
 \begin{minipage}[c]{0.7\columnwidth}
+    \textrightarrow $\Delta V_T$ ist proportional zur absoluten Temperatur $T$
+\end{minipage}
 
     \begin{tabular}{@{}c c@{}}
         $V_D = n \cdot \frac{k T}{q} \cdot \ln \Big( \frac{I_D}{I_S} \Big)$ & 
@@ -152,8 +148,6 @@
     \end{tabular}
 
     $$ \boxed{ \Delta V_D = V_D - V_DN = n \cdot \frac{k T}{q} \cdot \ln(N)  = TK \cdot T }$$
-    \textrightarrow $\Delta V_T$ ist proportional zur absoluten Temperatur $T$
-\end{minipage}
 
 
 \subsection{Bandgap-Spannungsreferenz}
