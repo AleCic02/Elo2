@@ -5,6 +5,61 @@
 % Only essential packages and the title block command are included.
 % ================================================================================================
 
+% --------------------------------- FROM STITZ ------------------------------------------------
+\usepackage[squaren]{SIunits}       % SI-units
+\usepackage{tabularx}
+\usepackage{circuitikz}
+\usepackage{outlines}
+\usepackage{graphbox}
+\usepackage{booktabs}
+\usepackage{pgfplots}
+\usepackage[normalem]{ulem}
+\usepackage[outline]{contour}
+\newcommand{\myul}[1]{%
+    \uline{\phantom{#1}}%
+    \llap{\contour{white}{#1}}%
+}
+
+% shortcuts for colored text
+\newcommand{\cgn}[1]{{\color{green}#1}}
+\newcommand{\crd}[1]{{\color{red}#1}}
+\newcommand{\cbl}[1]{{\color{blue}#1}}
+\newcommand{\cor}[1]{{\color{orange}#1}}
+\newcommand{\cvt}[1]{{\color{violet}#1}}
+
+% custom command for differential operator d
+\newcommand{\diff}{\ensuremath{\mathop{} \! \mathrm{d}}}
+
+% custom command for examples
+\newcommand{\example}[1]{\subsubsection*{Beispiel: #1}}
+
+% bullet command for items in tables
+\newcommand{\tabitem}{~~\llap{\textbullet}~~}
+
+% new environment for centered tabulars
+\NewDocumentEnvironment{ctabular}{m}
+                       {\center\tabular{#1}}
+                       {\endtabular\endcenter}
+
+
+% custom command for imaginary unit, j
+\newcommand{\jimg}{\ensuremath{\mathrm{j}}}
+
+% ----------------------------------- TIKZ / PGFPLOTS SETTINGS ------------------------------------
+\usetikzlibrary{arrows}
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{bending}
+\usetikzlibrary{decorations.pathreplacing}
+\usetikzlibrary{angles}
+\usetikzlibrary{tikzmark}
+\usetikzlibrary{petri}
+\usetikzlibrary{positioning}
+\usetikzlibrary{shapes}
+\usetikzlibrary{calc}
+
+\pgfplotsset{compat=1.17}	        % newest version
+
+
 % --------------------------------- ONLY FOR TESTING ----------------------------------------------
 \usepackage{lipsum} % For generating dummy text
 

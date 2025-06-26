@@ -1,12 +1,13 @@
-% ========================================= TEMPLATE INFO ========================================
+% ========================================= TEMPLATE INFO =========================================
 %
-% Author:       P4ntomime
-% Version:      1.0.0
-% Last updated: 2024-02-18
+% Author:       Rin-Ha-n
+% Version:      1.0
+% Last updated: 2025-05-15
 % Brief:        A LaTeX template for summaries. See README.md for more information.
-% 
+% Inspired by:  https://gitlab.com/sstitz, https://github.com/FabianSuter, https://github.com/OST-Stud
+
 % ================================================================================================
-\documentclass[8pt, a4paper, twoside]{extarticle}
+\documentclass[8pt, a4paper, twoside, landscape]{extarticle}
 % Font size:    8pt
 % Paper size:   A4
 % style:        twoside (needed, so odd and even pages have different margins)
@@ -16,12 +17,18 @@
 % ========================================= DOCUMENT INFO =========================================
 \def\title{Elektronik 2}                                    % title
 \def\shorttitle{Elo 2}                                      % short title (displayed as PDF title)
-\def\dozent{Prof. Guido Keel (Michael Lehmann)}             % lecturer
-\def\semester{FS 24}                                        % semester
-\def\author{Simone Stitz, Laurin Heitzer}                   % author(s)
-\def\repo{https://github.com/P4ntomime/elektronik-2}        % repository link
+\def\dozent{Prof. Guido Keel}                               % lecturer
+\def\semester{FS 25}                                        % semester
+\def\author{Alessio Ciceri, Ricca Aaron}                    % author(s)
+\def\repo{https://github.com/AleCic02/Elo2}                 % repository link
 \def\version{1.0.\today}                                    % version
-\def\pagelimit{20}                                          % page limit -> causes pages after limit to be red
+\def\pagelimit{10}                                          % page limit -> causes pages after limit to be red
+\def\titleoption{ultra compact}                         % options: ultra compact, compact, normal
+\def\enableToC{false}                                   % enable table of contents (true/false)        
+
+\def\sectioncolor{green}                                % section color   (Used green because as shown in psycology studies it calms you) 
+\def\subsectioncolor{green}                             % subsection color
+\def\subsubsectioncolor{green}                          % subsubsection color
 
 
 % ================================= PACKAGES, SETUP AND COMMANDS ==================================
@@ -30,8 +37,10 @@
 
 % =========================================== DOCUMENT ============================================
 \begin{document}
-    \begin{layout}
-      \input{sections/01_feldeffekt_transistoren.tex}
+    \begin{multicols}{4}
+        \raggedcolumns
+        \cheatsheettitle
+        \input{sections/01_feldeffekt_transistoren.tex}
         \input{sections/02_ttl_logik.tex}
         \input{sections/03_cmos_logik.tex}
         \input{sections/04_schmitt-trigger.tex}
@@ -54,6 +63,6 @@
         \input{sections/21_pcb.tex}
 
         \input{sections/99_appendix.tex}
-    \end{layout}
+    \end{multicols}
 \end{document}
 
